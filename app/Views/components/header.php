@@ -9,6 +9,7 @@
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>
+    
     <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
             <li class="nav-item dropdown pe-3">
@@ -19,7 +20,7 @@
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
                         <h6><?= session()->get('name') ?></h6>
-                        <span><?= session()->get('role') ?></span>
+                        <span>Administrasi Laundry</span>
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>

@@ -1,5 +1,6 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('title') ?>Layanan Kami<?= $this->endSection() ?>
+
 <?= $this->section('content') ?>
 <div class="pagetitle">
     <h1>Paket Layanan</h1>
@@ -13,8 +14,9 @@
 
 <section class="section">
     <div class="row">
+        <!-- Cuci Setrika Reguler -->
         <div class="col-lg-4 col-md-6">
-            <div class="card prodi-card">
+            <div class="card prodi-card h-100">
                 <div class="card-body">
                     <h5 class="card-title"><i class="bi bi-droplet me-2"></i>Cuci Setrika Reguler</h5>
                     <h6 class="card-subtitle mb-3 text-muted">
@@ -27,11 +29,14 @@
                         <li>Pewangi Tahan Lama</li>
                         <li>Setrika Rapi</li>
                     </ul>
+                    <a href="/laundry/create?layanan=reguler" class="stretched-link"></a>
                 </div>
             </div>
         </div>
+
+        <!-- Laundry Express -->
         <div class="col-lg-4 col-md-6">
-            <div class="card prodi-card">
+            <div class="card prodi-card h-100">
                 <div class="card-body">
                     <h5 class="card-title"><i class="bi bi-lightning-charge me-2"></i>Laundry Express</h5>
                     <h6 class="card-subtitle mb-3 text-muted">
@@ -44,11 +49,14 @@
                         <li>Selesai dalam 24 Jam</li>
                         <li>Free Antar Jemput*</li>
                     </ul>
+                    <a href="/laundry/create?layanan=express" class="stretched-link"></a>
                 </div>
             </div>
         </div>
+
+        <!-- Dry Clean & Satuan -->
         <div class="col-lg-4 col-md-6">
-            <div class="card prodi-card">
+            <div class="card prodi-card h-100">
                 <div class="card-body">
                     <h5 class="card-title"><i class="bi bi-basket me-2"></i>Dry Clean & Satuan</h5>
                     <h6 class="card-subtitle mb-3 text-muted">
@@ -61,6 +69,7 @@
                         <li>Gaun Malam / Kebaya</li>
                         <li>Sepatu & Tas</li>
                     </ul>
+                    <a href="/laundry/create?layanan=dryclean" class="stretched-link"></a>
                 </div>
             </div>
         </div>
