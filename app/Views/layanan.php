@@ -1,0 +1,69 @@
+<?= $this->extend('layout') ?>
+<?= $this->section('title') ?>Layanan Kami<?= $this->endSection() ?>
+<?= $this->section('content') ?>
+<div class="pagetitle">
+    <h1>Paket Layanan</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active">Layanan</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="card prodi-card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-droplet me-2"></i>Cuci Setrika Reguler</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">
+                        <span class="badge bg-primary">Rp 6.000/kg</span>
+                        <span class="badge bg-success">2-3 Hari</span>
+                    </h6>
+                    <p class="card-text">Layanan standar cuci, kering, dan setrika rapi. Cocok untuk pakaian sehari-hari.</p>
+                    <ul class="small text-muted">
+                        <li>Deterjen Premium</li>
+                        <li>Pewangi Tahan Lama</li>
+                        <li>Setrika Rapi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card prodi-card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-lightning-charge me-2"></i>Laundry Express</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">
+                        <span class="badge bg-warning text-dark">Rp 10.000/kg</span>
+                        <span class="badge bg-danger">1 Hari (Same Day)</span>
+                    </h6>
+                    <p class="card-text">Layanan prioritas untuk Anda yang membutuhkan pakaian bersih dalam waktu singkat.</p>
+                    <ul class="small text-muted">
+                        <li>Proses Prioritas</li>
+                        <li>Selesai dalam 24 Jam</li>
+                        <li>Free Antar Jemput*</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card prodi-card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-basket me-2"></i>Dry Clean & Satuan</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">
+                        <span class="badge bg-info text-dark">Harga Satuan</span>
+                        <span class="badge bg-secondary">Khusus</span>
+                    </h6>
+                    <p class="card-text">Khusus untuk bahan delicat, jas, gaun, boneka, dan sepatu.</p>
+                    <ul class="small text-muted">
+                        <li>Jas / Blazer</li>
+                        <li>Gaun Malam / Kebaya</li>
+                        <li>Sepatu & Tas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?= $this->endSection() ?>

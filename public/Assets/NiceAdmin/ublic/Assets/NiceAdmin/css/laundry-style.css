@@ -1,0 +1,53 @@
+/* Fresh Laundry Color Scheme */
+:root {
+    --laundry-blue: #0056b3;
+    --laundry-light-blue: #e0f7fa;
+    --laundry-yellow: #ffc107;
+    --laundry-gray: #333333;
+}
+
+body { font-family: 'Open Sans', Arial, sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; font-weight: 600; }
+
+/* Header */
+#header {
+    background: linear-gradient(135deg, var(--laundry-blue) 0%, #003d82 100%) !important;
+    box-shadow: 0 2px 15px rgba(0,86,179,0.3);
+    height: 70px;
+}
+#header .logo span { font-size: 1.4rem; font-weight: 600; color: white !important; margin-left: 10px; }
+
+/* Sidebar */
+#sidebar { background: var(--laundry-blue) !important; border-right: 3px solid var(--laundry-yellow); }
+.sidebar-nav .nav-link { color: rgba(255,255,255,0.85) !important; border-left: 4px solid transparent; }
+.sidebar-nav .nav-link:hover, .sidebar-nav .nav-link.active { 
+    color: white !important; background: rgba(255,255,255,0.1) !important; border-left-color: var(--laundry-yellow); 
+}
+
+/* Page Title */
+.pagetitle { border-bottom: 3px solid var(--laundry-blue); }
+.pagetitle h1 { color: var(--laundry-blue) !important; }
+
+/* Cards */
+.card { border-top: 4px solid var(--laundry-blue) !important; }
+.card .card-title { color: var(--laundry-blue); border-bottom: 2px solid var(--laundry-light-blue); }
+
+/* Buttons */
+.btn-primary { background-color: var(--laundry-blue) !important; border-color: var(--laundry-blue) !important; }
+.btn-primary:hover { background-color: var(--laundry-yellow) !important; border-color: var(--laundry-yellow) !important; color: var(--laundry-blue) !important; }
+
+/* Hero Section */
+.hero-laundry {
+    background: linear-gradient(135deg, var(--laundry-blue) 0%, #003d82 100%);
+    color: white; padding: 60px 0; margin-bottom: 30px; border-bottom: 5px solid var(--laundry-yellow);
+}
+.hero-laundry h1 { font-size: 3rem; font-weight: 700; }
+
+/* Stats & Service Cards */
+.stat-box { text-align: center; padding: 30px; background: white; border-radius: 8px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); }
+.stat-box h3 { color: var(--laundry-blue); font-size: 2.5rem; }
+.prodi-card { border-top: 4px solid var(--laundry-yellow) !important; }
+.prodi-card .card-title { color: var(--laundry-blue); }
+
+/* Footer */
+#footer { background: var(--laundry-blue) !important; color: white !important; border-top: 3px solid var(--laundry-yellow); }
