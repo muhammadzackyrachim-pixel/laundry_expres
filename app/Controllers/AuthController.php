@@ -8,7 +8,7 @@ class AuthController extends BaseController
     private $users = [
         'admin' => [
             'password' => 'admin123',
-            'name'     => 'Administrator Kampus',
+            'name'     => 'Administrator Laundry',
             'role'     => 'admin'
         ],
         'dosen' => [
