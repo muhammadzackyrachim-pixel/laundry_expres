@@ -29,8 +29,5 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
 
 // ===== HALAMAN KHUSUS ADMIN =====
 $routes->group('', ['filter' => 'admin'], function($routes) {
-    // Tambahkan routes yang hanya bisa diakses admin di sini
-    // Contoh: manajemen user, laporan lengkap, dll
-    $routes->get('admin/dashboard', 'Dashboard::index');
     $routes->get('laporan', 'Laporan::index');
 });

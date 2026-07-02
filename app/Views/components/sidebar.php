@@ -25,12 +25,6 @@
             <li class="nav-heading">Manajemen Sistem</li>
             
             <li class="nav-item">
-                <a class="nav-link <?= uri_string() === 'admin/dashboard' ? '' : 'collapsed' ?>" href="/admin/dashboard">
-                    <i class="bi bi-speedometer2"></i><span>Dashboard Admin</span>
-                </a>
-            </li>
-            
-            <li class="nav-item">
                 <a class="nav-link <?= uri_string() === 'laporan' ? '' : 'collapsed' ?>" href="/laporan">
                     <i class="bi bi-file-earmark-text"></i><span>Laporan</span>
                 </a>
