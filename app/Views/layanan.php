@@ -29,7 +29,25 @@
                         <li>Pewangi Tahan Lama</li>
                         <li>Setrika Rapi</li>
                     </ul>
-                    <a href="/laundry/create?layanan=reguler" class="stretched-link"></a>
+                    
+                    <!-- Form Tambah ke Cart -->
+                    <form action="/cart/add" method="post" class="mt-3">
+                        <?= csrf_field() ?>
+                        <input type="hidden" name="layanan_id" value="1">
+                        <input type="hidden" name="nama_layanan" value="Cuci Setrika Reguler">
+                        <input type="hidden" name="harga_satuan" value="6000">
+                        <input type="hidden" name="jumlah" value="1">
+                        
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Berat Cucian (kg)</label>
+                            <input type="number" name="berat_kg" class="form-control" 
+                                   placeholder="Masukkan berat dalam kg" min="0.5" step="0.5" value="1" required>
+                            <small class="text-muted">Harga: Rp 6.000 x berat kg</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-cart-plus me-1"></i> Tambah ke Keranjang
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -49,7 +67,25 @@
                         <li>Selesai dalam 24 Jam</li>
                         <li>Free Antar Jemput*</li>
                     </ul>
-                    <a href="/laundry/create?layanan=express" class="stretched-link"></a>
+                    
+                    <!-- Form Tambah ke Cart -->
+                    <form action="/cart/add" method="post" class="mt-3">
+                        <?= csrf_field() ?>
+                        <input type="hidden" name="layanan_id" value="2">
+                        <input type="hidden" name="nama_layanan" value="Laundry Express">
+                        <input type="hidden" name="harga_satuan" value="10000">
+                        <input type="hidden" name="jumlah" value="1">
+                        
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Berat Cucian (kg)</label>
+                            <input type="number" name="berat_kg" class="form-control" 
+                                   placeholder="Masukkan berat dalam kg" min="0.5" step="0.5" value="1" required>
+                            <small class="text-muted">Harga: Rp 10.000 x berat kg</small>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">
+                            <i class="bi bi-cart-plus me-1"></i> Tambah ke Keranjang
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -69,7 +105,25 @@
                         <li>Gaun Malam / Kebaya</li>
                         <li>Sepatu & Tas</li>
                     </ul>
-                    <a href="/laundry/create?layanan=dryclean" class="stretched-link"></a>
+                    
+                    <!-- Form Tambah ke Cart -->
+                    <form action="/cart/add" method="post" class="mt-3">
+                        <?= csrf_field() ?>
+                        <input type="hidden" name="layanan_id" value="3">
+                        <input type="hidden" name="nama_layanan" value="Dry Clean & Satuan">
+                        <input type="hidden" name="harga_satuan" value="25000">
+                        <input type="hidden" name="jumlah" value="1">
+                        
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Berat Cucian (kg)</label>
+                            <input type="number" name="berat_kg" class="form-control" 
+                                   placeholder="Masukkan berat dalam kg" min="0.5" step="0.5" value="1" required>
+                            <small class="text-muted">Harga: Rp 25.000 x berat kg</small>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100">
+                            <i class="bi bi-cart-plus me-1"></i> Tambah ke Keranjang
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

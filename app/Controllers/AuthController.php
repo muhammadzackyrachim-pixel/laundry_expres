@@ -2,21 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class AuthController extends BaseController
 {
-    // Data user statis (SOAL 04)
-    private $users = [
-        'admin' => [
-            'password' => 'admin123',
-            'name'     => 'Administrator Laundry',
-            'role'     => 'admin'
-        ],
-        'dosen' => [
-            'password' => 'dosen123',
-            'name'     => 'Dosen Tetap',
-            'role'     => 'dosen'
-        ]
-    ];
+    protected $userModel;
+
+    public function __construct()
+    {
+        $this->userModel = new UserModel();
+    }
 
     public function index()
     {
@@ -24,7 +19,7 @@ class AuthController extends BaseController
         if (session()->get('isLoggedIn')) {
             return redirect()->to('/');
         }
-
+        
         return view('login');
     }
 
@@ -33,19 +28,22 @@ class AuthController extends BaseController
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        // Cek username ada di array
-        if (isset($this->users[$username])) {
-            // Cek password cocok
-            if ($this->users[$username]['password'] === $password) {
+        // Cari user berdasarkan username
+        $user = $this->userModel->where('username', $username)->first();
+
+        if ($user) {
+            // Verifikasi password
+            if (password_verify($password, $user['password'])) {
                 // Set session
                 session()->set([
                     'isLoggedIn' => true,
-                    'username'   => $username,
-                    'name'       => $this->users[$username]['name'],
-                    'role'       => $this->users[$username]['role']
+                    'user_id'    => $user['id'],
+                    'username'   => $user['username'],
+                    'nama'       => $user['nama'],
+                    'role'       => $user['role'],
                 ]);
 
-                return redirect()->to('/')->with('success', 'Selamat datang ' . $this->users[$username]['name']);
+                return redirect()->to('/')->with('success', 'Selamat datang ' . $user['nama']);
             }
         }
 

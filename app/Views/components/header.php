@@ -19,11 +19,11 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6><?= session()->get('name') ?></h6>
-                        <span>Administrasi Laundry</span>
+                        <h6><?= session()->get('nama') ?></h6>
+                        <span class="badge bg-<?= session()->get('role') === 'admin' ? 'danger' : 'primary' ?>">
+                            <?= ucfirst(session()->get('role')) ?>
+                        </span>
                     </li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li>
                         <a class="dropdown-item d-flex align-items-center" href="/logout">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sign Out</span>

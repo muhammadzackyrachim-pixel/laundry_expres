@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 use App\Models\PelangganModel;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class Pelanggan extends BaseController
 {
@@ -57,5 +59,29 @@ class Pelanggan extends BaseController
     {
         $this->pelangganModel->delete($id);
         return redirect()->to('/pelanggan')->with('success', 'Data pelanggan berhasil dihapus!');
+    }
+
+    // METHOD BARU UNTUK DOWNLOAD PDF
+    public function downloadPdf()
+    {
+        $pelanggan = $this->pelangganModel->orderBy('nama', 'ASC')->findAll();
+
+        $options = new Options();
+        $options->set('isRemoteEnabled', true);
+        $options->set('defaultFont', 'Arial');
+        
+        $dompdf = new Dompdf($options);
+
+        $data = ['pelanggan' => $pelanggan];
+        $html = view('pelanggan/pdf', $data);
+
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+
+        $dompdf->stream('Data_Pelanggan_Fresh_Laundry_' . date('Y-m-d') . '.pdf', [
+            'Attachment' => true
+        ]);
+        exit;
     }
 }
